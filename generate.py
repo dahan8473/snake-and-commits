@@ -45,6 +45,24 @@ THEMES = {
         ramp=[(1, "#8affc1"), (4, "#39d353"), (10, "#26a641"), (21, "#006d32")],
         text="#7d8590", frame_bg="#0d1117", frame_border="#30363d",
     ),
+    "blue": dict(
+        levels=["#161b22", "#0f2f56", "#1f5fa6", "#3f8bd6", "#79c0ff"],
+        snake="#58a6ff", head="#c9e4ff",
+        ramp=[(1, "#c9e4ff"), (4, "#58a6ff"), (10, "#3f83d6"), (21, "#2e62a8")],
+        text="#7d8590", frame_bg="#0d1117", frame_border="#22406a",
+    ),
+    "amber": dict(
+        levels=["#1a1710", "#3d2f0e", "#7a5c14", "#c99a1e", "#ffd257"],
+        snake="#ffd257", head="#fff2c2",
+        ramp=[(1, "#fff2c2"), (4, "#ffd257"), (10, "#c99a1e"), (21, "#7a5c14")],
+        text="#8a7752", frame_bg="#0d0b07", frame_border="#4d3d16",
+    ),
+    "matrix": dict(
+        levels=["#0a0f0a", "#0d3d1a", "#12742f", "#1fb84e", "#39ff7a"],
+        snake="#39ff7a", head="#d6ffe4",
+        ramp=[(1, "#d6ffe4"), (4, "#39ff7a"), (10, "#1fb84e"), (21, "#12742f")],
+        text="#3fa060", frame_bg="#000000", frame_border="#123d1f",
+    ),
 }
 
 
