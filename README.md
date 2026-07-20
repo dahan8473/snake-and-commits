@@ -110,3 +110,5 @@ data works.
 Built by [David Liu](https://github.com/dahan8473). Inspired by the
 contribution-graph art tradition ([Platane/snk](https://github.com/Platane/snk)
 and friends), rebuilt from scratch as an actual game of Snake. MIT licensed.
+
+pls drop a star!
