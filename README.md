@@ -9,12 +9,12 @@ pathfinding, never crosses its own body, grows one segment per cell it eats,
 fades from a bright head to a dim tail, and counts the commits it swallows. Pure
 animated SVG (CSS, no JavaScript), so it renders anywhere GitHub shows an image.
 
-- Real Snake AI: BFS pathfinding, self-collision avoidance, tail-chasing when boxed in
-- Eats your commits: each contribution cell is food, with a live counter
-- Grows as it eats: starts at 3 segments, gains one per cell, head-to-tail gradient
-- Themeable: `green` (default), `blue`, `amber`, `matrix`
-- Zero dependencies: one standard-library Python file
-- Respects `prefers-reduced-motion`: falls back to a static graph
+- 🐍 **Real Snake AI**: BFS pathfinding, self-collision avoidance, tail-chasing when boxed in
+- 🍎 **Eats your commits**: each contribution cell is food, with a live counter
+- 📈 **Grows as it eats**: starts at 3 segments, gains one per cell, head-to-tail gradient
+- 🎨 **Themeable**: `green` (default), `blue`, `amber`, `matrix`
+- 🪶 **Zero dependencies**: one standard-library Python file
+- ♿ **Respects `prefers-reduced-motion`**: falls back to a static graph
 
 ## Quickstart
 
@@ -78,8 +78,12 @@ Generate two themes and switch with `<picture>`:
 
 ## Themes
 
-`green` is the native GitHub look. `blue` is a phosphor terminal. `amber` is an
-old CRT. `matrix` is bright-on-black.
+| theme | look |
+|---|---|
+| 🟩 `green` | native GitHub |
+| 🟦 `blue` | phosphor terminal |
+| 🟧 `amber` | old CRT |
+| ⬛ `matrix` | bright-on-black |
 
 ## Run locally
 
