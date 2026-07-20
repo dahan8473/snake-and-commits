@@ -1,0 +1,32 @@
+name: demo
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: generate demo snakes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python generate.py --user ${{ github.repository_owner }} --output dist/snake-green.svg --frame
+          python generate.py --user ${{ github.repository_owner }} --output dist/snake-blue.svg  --theme blue  --frame
+          python generate.py --user ${{ github.repository_owner }} --output dist/snake-amber.svg --theme amber --frame
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
