@@ -1,0 +1,41 @@
+name: snake-and-commits
+description: Turn your GitHub contribution graph into a game of Snake (animated SVG).
+author: dahan8473
+branding:
+  icon: play
+  color: green
+
+inputs:
+  github_user:
+    description: GitHub username whose contribution graph to render.
+    required: true
+  output:
+    description: Output SVG path.
+    required: false
+    default: dist/snake.svg
+  theme:
+    description: "Color theme: green | blue | amber | matrix."
+    required: false
+    default: green
+  frame:
+    description: Draw a rounded window frame (true/false).
+    required: false
+    default: "false"
+  counter:
+    description: Show the commits-eaten counter (true/false).
+    required: false
+    default: "true"
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        python3 "${{ github.action_path }}/generate.py" \
+          --user "${{ inputs.github_user }}" \
+          --output "${{ inputs.output }}" \
+          --theme "${{ inputs.theme }}" \
+          $([ "${{ inputs.frame }}" = "true" ] && echo --frame) \
+          $([ "${{ inputs.counter }}" = "false" ] && echo --no-counter)
